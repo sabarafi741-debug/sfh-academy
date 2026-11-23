@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a90016">
+<title>SFH Academy | Learn • Practice • Excel</title>
+<style>
+:root{--red:#a90018;--deep:#65000e;--gold:#d8b56b;--cream:#fff8eb;--ink:#241a18;--muted:#756a67;--line:#eadfce}
+*{box-sizing:border-box}body{margin:0;background:#faf7f1;color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(125deg,#5c000b,#b0001b 65%,#7d0011);color:white;padding:22px max(5vw,20px) 30px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;width:320px;height:320px;border:2px solid #d8b56b55;border-radius:50%;right:-100px;top:-170px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:15px;max-width:1120px;margin:auto}
+.brand{display:flex;align-items:center;gap:12px}.mark{width:54px;height:54px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font: bold 19px Georgia,serif;letter-spacing:-3px;text-shadow:0 1px #fff5}
+.brand strong{display:block;font: bold 23px Georgia,serif;letter-spacing:2px}.brand small{color:#f1dcae;letter-spacing:2px;font-size:10px}
+nav{display:flex;gap:7px;flex-wrap:wrap}nav button{background:transparent;border:0;color:#fff;padding:9px 11px;border-radius:9px;cursor:pointer;font-weight:600}nav button:hover,nav button.active{background:#ffffff20}
+.hero{max-width:1120px;margin:34px auto 0;display:grid;grid-template-columns:1.3fr .7fr;gap:25px;align-items:center}
+.eyebrow{color:#f2d99e;letter-spacing:2px;text-transform:uppercase;font-size:12px;font-weight:800}
+h1{font: bold clamp(34px,5vw,56px)/1.08 Georgia,serif;margin:10px 0;color:#fff}.hero p{color:#f9e9e5;max-width:570px;margin:12px 0 20px}
+.btn{background:var(--gold);color:#3c170d;border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}.btn.secondary{background:#fff;border:1px solid var(--line)}.hero-card{background:#ffffff12;border:1px solid #ffffff35;border-radius:18px;padding:22px;text-align:center;backdrop-filter:blur(4px)}.hero-card .cap{font-size:54px}.hero-card b{display:block;color:#f6dca4;font: bold 24px Georgia,serif}
+main{max-width:1120px;margin:28px auto;padding:0 20px 50px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:28px 0 14px}.section-head h2{font: bold 27px Georgia,serif;margin:0}.section-head p{margin:3px 0;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat,.card,.panel{background:white;border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:0 5px 18px #43200a08}.stat strong{font-size:25px;color:var(--red);display:block}.stat span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{transition:.15s}.card:hover{transform:translateY(-2px);box-shadow:0 9px 24px #43200a12}.icon{width:43px;height:43px;border-radius:12px;background:#fff1df;display:grid;place-items:center;font-size:22px;margin-bottom:10px}.card h3{margin:4px 0 5px;font-size:18px}.card p{color:var(--muted);font-size:14px;margin:0 0 13px}.tag{display:inline-block;background:#f8eee0;color:#774b19;border-radius:99px;padding:4px 9px;font-size:11px;font-weight:700}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.toolbar input,.toolbar select,.field{border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:white;font:inherit;min-width:0}.toolbar input{flex:1;min-width:190px}
+button.link{background:none;border:0;color:var(--red);font-weight:800;cursor:pointer;padding:0}
+.page{display:none}.page.active{display:block}.lesson-list{display:grid;gap:10px}.lesson{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px;background:white;border:1px solid var(--line);border-radius:12px}.lesson small{color:var(--muted);display:block}
+.quiz-q{font-weight:750;margin:8px 0 12px}.answers{display:grid;gap:8px}.answers button{text-align:left;padding:11px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer}.answers button:hover{border-color:var(--gold);background:#fffaf0}.feedback{min-height:26px;font-weight:700;margin-top:10px}.note{background:#fff8e9;border-left:4px solid var(--gold);padding:13px;border-radius:8px;color:#60451f}
+footer{background:#2c1013;color:#f8e8d0;padding:25px;text-align:center;font-size:13px}footer b{color:var(--gold)}
+@media(max-width:760px){.hero{grid-template-columns:1fr;margin-top:25px}.hero-card{display:none}.grid{grid-template-columns:repeat(2,1fr)}nav{justify-content:flex-end}nav button{font-size:12px;padding:8px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:21px}}
+@media(max-width:480px){.top{align-items:flex-start;flex-direction:column}.hero{margin-top:22px}.grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:1fr 1fr 1fr}.brand strong{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <div class="brand"><div class="mark">SFH</div><div><strong>SFH ACADEMY</strong><small>LEARN • PRACTICE • EXCEL</small></div></div>
+  <nav>
+   <button class="active" data-page="home">Home</button><button data-page="courses">Courses</button><button data-page="notes">Study notes</button><button data-page="quiz">Quiz</button><button data-page="about">About</button>
+  </nav>
+ </div>
+ <div class="hero">
+  <div><div class="eyebrow">Your education, our priority</div><h1>Learn today.<br>Lead tomorrow.</h1><p>A welcoming place to explore subjects, revise key ideas and practise what you learn — from school to university and beyond.</p><button class="btn" onclick="showPage('courses')">Explore learning <span aria-hidden="true">→</span></button></div>
+  <div class="hero-card"><div class="cap">🎓</div><b>Your learning journey</b><p>Notes · Lessons · Quizzes</p><span class="tag">FOR EVERY LEARNER</span></div>
+ </div>
+</header>
+<main>
+ <section id="home" class="page active">
+  <div class="section-head"><div><h2>Welcome to SFH Academy</h2><p>Small steps make big progress.</p></div></div>
+  <div class="stats"><div class="stat"><strong>All levels</strong><span>School to university</span></div><div class="stat"><strong>Learn</strong><span>Explore useful topics</span></div><div class="stat"><strong>Practise</strong><span>Check your understanding</span></div></div>
+  <div class="section-head"><div><h2>Explore learning</h2><p>Choose a starting point.</p></div><button class="link" onclick="showPage('courses')">View all courses →</button></div>
+  <div class="grid" id="homeCourses"></div>
+  <div class="section-head"><div><h2>Quick practice</h2><p>Try a sample question.</p></div></div>
+  <div class="panel"><div class="quiz-q">Which planet is known as the Red Planet?</div><div class="answers"><button onclick="quickAnswer(this,false)">Venus</button><button onclick="quickAnswer(this,true)">Mars</button><button onclick="quickAnswer(this,false)">Jupiter</button></div><div class="feedback" id="quickFeedback" aria-live="polite"></div></div>
+ </section>
+ <section id="courses" class="page">
+  <div class="section-head"><div><h2>Learning categories</h2><p>Browse subjects and choose what you want to study.</p></div></div>
+  <div class="toolbar"><input id="search" placeholder="Search subjects..." aria-label="Search subjects"><select id="level"><option value="all">All levels</option><option>School</option><option>College</option><option>University</option><option>Skills</option></select></div>
+  <div class="grid" id="courseGrid"></div>
+ </section>
+ <section id="notes" class="page">
+  <div class="section-head"><div><h2>Study notes</h2><p>Short starter notes. Add your own verified learning material as you grow.</p></div></div>
+  <div class="lesson-list">
+   <div class="lesson"><div><b>Science: The water cycle</b><small>Evaporation → condensation → precipitation → collection.</small></div><span class="tag">School</span></div>
+   <div class="lesson"><div><b>Mathematics: Percentage</b><small>Percentage means “out of 100”. Example: 25% = 25/100 = 0.25.</small></div><span class="tag">School</span></div>
+   <div class="lesson"><div><b>English: Parts of speech</b><small>Nouns name; verbs show action or state; adjectives describe nouns.</small></div><span class="tag">All levels</span></div>
+   <div class="lesson"><div><b>Computer: What is an algorithm?</b><small>An algorithm is a clear sequence of steps used to solve a problem.</small></div><span class="tag">Skills</span></div>
+  </div>
+  <p class="note">These are sample notes for the first prototype. Review and expand educational content before sharing it with learners.</p>
+ </section>
+ <section id="quiz" class="page">
+  <div class="section-head"><div><h2>Knowledge check</h2><p>Answer these sample questions and see your score.</p></div></div>
+  <div class="panel"><div id="quizArea"></div><div class="feedback" id="quizFeedback" aria-live="polite"></div><button class="btn" id="nextQuestion">Next question</button><button class="btn secondary" id="restartQuiz">Restart</button></div>
+ </section>
+ <section id="about" class="page">
+  <div class="section-head"><div><h2>About SFH Academy</h2><p>Learn • Practice • Excel</p></div></div>
+  <div class="panel"><h3>Your Education, Our Priority</h3><p>SFH Academy is an educational learning hub concept for learners at different stages — school, college, university and lifelong skills.</p><p>Our goal is to make learning organised, approachable and engaging through study notes, lessons and practice quizzes.</p><p class="note">This is an early demo website. Course enrolment, student accounts, teacher uploads, live classes and cloud-synced progress are not connected yet.</p></div>
+ </section>
+</main>
+<footer><b>SFH ACADEMY</b><br>Learn • Practice • Excel<br><span>Educational demo · Built to grow with learners</span></footer>
+<script>
+const courses=[
+ {icon:"🔬",name:"Science",level:"School",desc:"Explore nature, matter, energy and the world around us."},
+ {icon:"➗",name:"Mathematics",level:"School",desc:"Build confidence with numbers, patterns and problem-solving."},
+ {icon:"📚",name:"English",level:"All levels",desc:"Practise reading, writing, grammar and communication."},
+ {icon:"💻",name:"Computer Skills",level:"Skills",desc:"Learn digital basics, safe computing and technology concepts."},
+ {icon:"🎓",name:"College Studies",level:"College",desc:"Organise revision and strengthen subject foundations."},
+ {icon:"🧪",name:"University Learning",level:"University",desc:"Explore academic skills, research and deeper subject study."}
+];
+function card(c){return `<article class="card"><div class="icon">${c.icon}</div><span class="tag">${c.level}</span><h3>${c.name}</h3><p>${c.desc}</p><button class="link" onclick="showPage('notes')">Explore notes →</button></article>`}
+document.getElementById('homeCourses').innerHTML=courses.slice(0,3).map(card).join('');
+function renderCourses(){let q=document.getElementById('search').value.toLowerCase(),l=document.getElementById('level').value;let filtered=courses.filter(c=>(c.name+' '+c.desc+' '+c.level).toLowerCase().includes(q)&&(l==='all'||c.level===l||c.level==='All levels'));document.getElementById('courseGrid').innerHTML=filtered.length?filtered.map(card).join(''):'<div class="panel">No matching subjects. Try another search.</div>'}
+document.getElementById('search').addEventListener('input',renderCourses);document.getElementById('level').addEventListener('change',renderCourses);renderCourses();
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function quickAnswer(btn,correct){document.querySelectorAll('#home .answers button').forEach(b=>b.disabled=true);document.getElementById('quickFeedback').textContent=correct?'Correct! Mars is known as the Red Planet.':'Not quite — the correct answer is Mars.'}
+const questions=[
+ {q:"Which planet is known as the Red Planet?",a:["Venus","Mars","Jupiter"],c:1,why:"Mars is often called the Red Planet because of its reddish appearance."},
+ {q:"What is 25% written as a decimal?",a:["2.5","0.25","25.0"],c:1,why:"25% means 25 out of 100, which is 0.25."},
+ {q:"Which part of a computer is often called its 'brain'?",a:["CPU","Monitor","Keyboard"],c:0,why:"The CPU processes instructions and data."},
+ {q:"Which word is a verb?",a:["Beautiful","Quickly","Run"],c:2,why:"A verb expresses an action or state."}
+];let qi=0,score=0,answered=false;
+function drawQuiz(){let q=questions[qi];answered=false;document.getElementById('quizArea').innerHTML=`<span class="tag">Question ${qi+1} of ${questions.length}</span><div class="quiz-q">${q.q}</div><div class="answers">${q.a.map((a,i)=>`<button onclick="chooseAnswer(${i})">${a}</button>`).join('')}</div>`;document.getElementById('quizFeedback').textContent='';document.getElementById('nextQuestion').textContent=qi===questions.length-1?'See result':'Next question'}
+function chooseAnswer(i){if(answered)return;answered=true;let q=questions[qi],ok=i===q.c;if(ok)score++;document.querySelectorAll('#quizArea .answers button').forEach((b,j)=>{b.disabled=true;if(j===q.c)b.style.borderColor='#27935c'});document.getElementById('quizFeedback').textContent=(ok?'Correct! ':'Good try. ')+q.why}
+document.getElementById('nextQuestion').onclick=()=>{if(!answered){document.getElementById('quizFeedback').textContent='Choose an answer first.';return}if(qi<questions.length-1){qi++;drawQuiz()}else{document.getElementById('quizArea').innerHTML=`<h3>Your score: ${score} / ${questions.length}</h3><p>Keep practising — every question is a chance to learn.</p>`;document.getElementById('quizFeedback').textContent='Quiz complete!';document.getElementById('nextQuestion').disabled=true}};
+document.getElementById('restartQuiz').onclick=()=>{qi=0;score=0;document.getElementById('nextQuestion').disabled=false;drawQuiz()};drawQuiz();
+</script>
+</body></html>
